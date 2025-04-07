@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ProjectToolbar from "../../ProjectToolbar.svelte";
+  import ProjectToolbar from "$lib/ProjectToolbar.svelte";
 
     interface Card {
       title: string;

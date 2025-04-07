@@ -5,11 +5,11 @@
    */
   import { API_URL, ajaxPost, ajaxGet } from "$lib/config/";
   import {Assets,type IAssets,loadImages} from "$lib/taleemApp/taleem-canvas";
-  import Editor from "../../lib/taleemApp/presentationEditor/Editor.svelte";
+  import Editor from "$lib/taleemApp/presentationEditor/Editor.svelte";
   import { onMount } from "svelte";
-  import canvasSlideRemoveAllHandles from "../../lib/taleemApp/app/canvasSlideRemoveAllHandles";
-  import getPresentationImages from "../../lib/taleemApp/app/getPresentationImages/getPresentationImages";
-  import { imagesDBList } from "../../lib/taleemApp/app/imagesDBList";
+  import canvasSlideRemoveAllHandles from "$lib/taleemApp/app/canvasSlideRemoveAllHandles";
+  import getPresentationImages from "$lib/taleemApp/app/getPresentationImages/getPresentationImages";
+  import { imagesDBList } from "$lib/taleemApp/app/imagesDBList";
   import { toast } from "@zerodevx/svelte-toast";
   import ProjectToolbar from "$lib/ProjectToolbar.svelte";
 

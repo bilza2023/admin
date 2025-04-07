@@ -1,5 +1,5 @@
 <script lang="ts">
-  // Import necessary types and functions
+
   import type { ISlide } from "../app/ISlide";
   import { onMount } from "svelte";
   import NewSlidesDlg from "./toolbar/NewSlidesDlg.svelte";

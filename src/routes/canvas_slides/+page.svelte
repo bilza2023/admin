@@ -9,7 +9,7 @@
   import { get } from 'svelte/store'; // Import get to retrieve the page store value.
   import Toolbar from "./toolbar/Toolbar.svelte";
   import { toast} from '@zerodevx/svelte-toast';
-  import getCanvasSlideImages from "../../lib/taleemApp/app/getPresentationImages/getCanvasSlideImages"
+  import getCanvasSlideImages from "$lib/taleemApp/app/getPresentationImages/getCanvasSlideImages"
   let slide = null;
   let assets = null;
   let slideName = '';
