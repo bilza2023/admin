@@ -1,0 +1,157 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "imports": [
+      "_internal.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/server/internal.js"
+  },
+  "_CoreItemsMap.js": {
+    "file": "chunks/CoreItemsMap.js"
+  },
+  "_PlayerToolbar.svelte_svelte_type_style_lang.js": {
+    "file": "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css",
+    "src": "_PlayerToolbar.svelte_svelte_type_style_lang.js"
+  },
+  "_ProjectToolbar.js": {
+    "file": "chunks/ProjectToolbar.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_SvelteToast.svelte_svelte_type_style_lang.js": {
+    "css": [
+      "_app/immutable/assets/SvelteToast.Bn1lMYWi.css"
+    ],
+    "file": "chunks/SvelteToast.svelte_svelte_type_style_lang.js",
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "imports": [
+      "_exports.js"
+    ]
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_client.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "imports": [
+      "_internal.js",
+      "_exports.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
+  },
+  "src/routes/+layout.svelte": {
+    "css": [
+      "_app/immutable/assets/_layout.6B7IPMHK.css"
+    ],
+    "file": "entries/pages/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  },
+  "src/routes/canvas_slides/+page.svelte": {
+    "file": "entries/pages/canvas_slides/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_CoreItemsMap.js",
+      "_client.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/canvas_slides/+page.svelte"
+  },
+  "src/routes/canvas_slides_index/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.CgOlHbo2.css"
+    ],
+    "file": "entries/pages/canvas_slides_index/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_ProjectToolbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/canvas_slides_index/+page.svelte"
+  },
+  "src/routes/db_editor/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.DTMBWJWD.css",
+      "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
+    ],
+    "file": "entries/pages/db_editor/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_CoreItemsMap.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js",
+      "_ProjectToolbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/db_editor/+page.svelte"
+  },
+  "src/routes/db_player/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.0YQbNFlR.css",
+      "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
+    ],
+    "file": "entries/pages/db_player/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js",
+      "_CoreItemsMap.js",
+      "_ProjectToolbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/db_player/+page.svelte"
+  },
+  "src/routes/syllabus/+page.svelte": {
+    "file": "entries/pages/syllabus/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/syllabus/+page.svelte"
+  }
+}

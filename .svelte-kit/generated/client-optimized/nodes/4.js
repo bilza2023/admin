@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/canvas_slides_index/+page.svelte";
