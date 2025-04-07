@@ -1,23 +1,24 @@
 <script>
     const cards = [
       {
+        title: 'Presentation Syllabus',
+        image: 'presentation.jpeg',
+        comments: 'Syllabus',
+        url : "syllabus"
+      },
+    {
         title: 'Editor',
         image: 'magic.jpeg',
-        comments: 'Database Editor',
+        comments: 'Editor',
         url : "db_editor"
       },
       {
         title: 'Player',
-        image: 'canvas.jpeg',
-        comments: 'Database Player',
+        image: 'player.jpeg',
+        comments: 'Player',
         url : "db_player"
       },
-      //   {
-      //   title: 'Presentations',
-      //   image: 'presentation.jpeg',
-      //   comments: 'Presentation templates',
-      //   url : "presentations_index?slide=slide0"
-      // },
+        
 
       // {
       //   title: 'The Editor',
