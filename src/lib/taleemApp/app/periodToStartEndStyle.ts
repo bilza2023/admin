@@ -11,14 +11,14 @@ for (let index = 0; index < slides.length; index++) {
     
     if(slide.type == "canvas"){
         slide.startTime = mainStartTime;
-        slide.calcEndTime = slide.startTime + slide.endTime;
-        mainStartTime =  slide.calcEndTime; //updated for next time  
+        slide.endTime = slide.startTime + slide.period;
+        mainStartTime =  slide.endTime; //updated for next time  
     }else {
         // debugger;
         slide.startTime = mainStartTime;
-        slide.calcEndTime = slide.startTime + getEqSlidePeriod(slide);
+        slide.endTime = slide.startTime + getEqSlidePeriod(slide);
         manageEqItems(slide,slide.startTime);
-        mainStartTime =  slide.calcEndTime; //updated for next time  
+        mainStartTime =  slide.endTime; //updated for next time  
     }
 }//for main
 return slides;
@@ -38,7 +38,7 @@ function manageEqItems(slide,slideStartTime){
      for (let i = 0; i < slide.items.length; i++) {
          const item = slide.items[i];
          item.startTime = mainStartingTime;
-         item.calcEndTime = item.startTime + item.endTime;
-         mainStartingTime = item.calcEndTime;
+         item.endTime = item.startTime + item.period;
+         mainStartingTime = item.endTime;
      }
  }
