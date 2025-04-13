@@ -69,11 +69,16 @@
   {#if presentations}
     <div class="card-container">
       {#each presentations as presentation}
+   
         <div class="card">
           <div class="card-header">{presentation.name}</div>
           <!-- <div class="card-body">
             <h1>{presentation.id}</h1>
             </div> -->
+            <div class="flex justify-around gap-2 ">
+              <a class="text-white rounded-md px-4" href="/editor?id={presentation.id}">Edit</a>
+              <a class="text-white rounded-md px-4" href="/player?id={presentation.id}">Play</a>
+            </div>
         </div>
       {/each}
     </div>
