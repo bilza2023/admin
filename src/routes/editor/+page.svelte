@@ -18,9 +18,11 @@
   let presentation: any = null; 
   let assets: IAssets | null = null;
   let images = [];
+  let id=null;
   //////////////////////////////////////////////////////////////////////////
   onMount(async () => {
-    const id = new URLSearchParams(location.search).get("id");
+    // debugger;
+    id = new URLSearchParams(location.search).get("id");
     const incommingPresentationResponse = await ajaxGet(`${API_URL}/presentation/read/${id}`);
 //....
     if (incommingPresentationResponse.ok) {
@@ -37,15 +39,8 @@
   });
 
   async function save() {
-    // debugger;
-    // const preparedSlides = periodToStartEndStyle(slides);
-    // const messages = presentationChecker(preparedSlides);
-    // const hasCritical = messages.some((message) => message.type === "critical");
-    // if (hasCritical) {
-    //   toast.push("Failed to save. Presentation has errors");
-    //   return;
-    // }
- 
+
+ debugger
     const eqSlidesData: any[] = []; // Explicitly type eqSlidesData
     const canvasSlidesData: any[] = []; // Explicitly type canvasSlidesData
     // debugger;
@@ -119,5 +114,5 @@
 
 <ProjectToolbar />
 {#if slides}
-  <Editor bind:slides {assets} {images} {save} {imagesDBList} />
+  <Editor bind:slides {assets} {images} {save} {imagesDBList} {id}/>
 {/if}

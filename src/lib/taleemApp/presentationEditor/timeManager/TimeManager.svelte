@@ -32,6 +32,13 @@
   <div class="bg-gray-700 text-white p-0 px-4 m-0 rounded-md border-2 border-gray-600"
   >{currentSlide.startTime}</div>
   
+
+
+  <!-- <span class='text-xs'>End At</span>
+  <div class="bg-gray-700 text-white p-0 px-4 m-0 rounded-md border-2 border-gray-600"
+  >{currentSlide.startTime + currentSlide.period}</div>
+   -->
+
   {/if}
   
     

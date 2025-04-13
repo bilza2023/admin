@@ -17,24 +17,20 @@
   import periodToStartEndStyle from "../app/periodToStartEndStyle";
   import PlayerToolbar from "../app/PlayerToolbar.svelte";
   import TimeManager from "./timeManager/TimeManager.svelte";
-
   // --- Props ---
   export let slides: ISlide[] = [];
   export let images: string[];
   export let imagesDBList: string[];
   export let save: () => void;
   export let assets: IAssets;
+  export let id;
   export let soundFileName = "/sounds/music.opus"; // Default sound file
-
   // --- Reactive Variables ---
   let currentSlide: ISlide | null = null;
   let currentSlideIndex = 0;
-  let currentSlideEndTime = 0;
-  let currentSlideDuration = 0;
   /////////////////////////////////
   let totalTime = 0;
   let currentTime = 0;
-
   let interval: number | null = null;
   let slidesList: ISlidesList[] = [];
   let showSidePanel = true;
@@ -42,7 +38,6 @@
   let showSoundBar = false;
   let showTimeManager = false;
   let soundPlayer = new SoundPlayer(soundFileName);
-
   // --- Reactive Statements --------------
   $: {
     if (currentSlide && slides) {
@@ -60,7 +55,6 @@
 
     }
   }
-
   ////////////////////////////////////////////////////////////////////////////////////
   onMount(async () => {
     // debugger;
@@ -73,7 +67,12 @@
       currentSlide = null;
     }
   });
-
+  function setSlideDuration() {
+    // debugger;
+    slides = periodToStartEndStyle(slides);  
+    slides = [...slides];
+    currentSlide = currentSlide;
+  }
   // --- Functions ---
   function log() {
     console.log("export const presentationData = " + JSON.stringify(slides));
@@ -93,7 +92,6 @@
     currentSlideIndex = index;
     currentSlide = slides[currentSlideIndex];
   }
-
   function addNew(slideType: ISlideTypeAvailable) {
     try {
       const newSlide = getNewSlide(slideType);
@@ -105,39 +103,18 @@
       console.error("Failed to add new slide:", error);
     }
   }
-
-  function setSlideDuration() {
-    // debugger;
-    slides = periodToStartEndStyle(slides);  
-    slides = [...slides];
-    currentSlide = currentSlide;
-  }
-
-  function setEqSlideLength() {
-  //updated start-end fields
-  debugger; 
-   slides = periodToStartEndStyle(slides);
-    // currentSlideEndTime = SlideEditor.getSlideEndTime(
-    //   currentSlideIndex,
-    //   slides
-    // );
-  }
-
   function clone() {
     cloneFn(currentSlideIndex, slides);
     next();
   }
-
   function moveUp() {
     moveUpFn(currentSlideIndex, slides);
     prev();
   }
-
   function moveDown() {
     moveDownFn(currentSlideIndex, slides);
     next();
   }
-
   function deleteFn() {
     del(currentSlideIndex, slides);
     if (slides.length > 0) {
@@ -149,13 +126,11 @@
       slidesList = getSlidesListForPanel(slides, currentSlideIndex);
     }
   }
-
   function start() {
     interval = setInterval(gameloop, 20);
     soundPlayer.start();
     currentTime = soundPlayer.getCurrentTime();
   }
-
   function stop() {
     if (interval) clearInterval(interval);
     soundPlayer.stop();
@@ -184,6 +159,7 @@
   {save}
   {clone}
   {paste}
+  {id}
   {deleteFn}
   bind:showSidePanel
   bind:show
@@ -230,7 +206,7 @@
             bind:items={currentSlide.items}
             currentSlideStartTime={currentSlide.startTime}
             {currentTime}
-            {setEqSlideLength}
+            {setSlideDuration}
             {imagesDBList}
           />
         {/if}

@@ -16,9 +16,10 @@
     let imagesUrl   = "/images/";//if needed take it out of onmount
 ////////////////////////////////      
 ////////////////////////////////
-      onMount(async () => {
-      try { // Added try-catch block for onMount
-        const id = new URLSearchParams(location.search).get("id");
+onMount(async () => {
+  try { // Added try-catch block for onMount
+    // debugger
+    const id = new URLSearchParams(location.search).get("id");
     const incommingPresentationResponse = await ajaxGet(`${API_URL}/presentation/read/${id}`);
 //....
     if (incommingPresentationResponse.ok) {
