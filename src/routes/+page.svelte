@@ -10,13 +10,13 @@
         title: 'Editor',
         image: 'magic.jpeg',
         comments: 'Editor',
-        url : "editor?id=cb03316d-4484-4c2d-9611-4eea48dc7e37"
+        url : "editor?id=cm9fk5dh50asj70fmtpm9tmg2"
       },
       {
         title: 'Player',
         image: 'player.jpeg',
         comments: 'Player',
-        url : "player?id=cb03316d-4484-4c2d-9611-4eea48dc7e37"
+        url : "player?id=cm9fk5dh50asj70fmtpm9tmg2"
       },
         
 

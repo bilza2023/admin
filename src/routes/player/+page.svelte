@@ -1,3 +1,4 @@
+
 <script lang="ts">
   //Since every thing is important so everything must be final.
   import { API_URL, ajaxPost, ajaxGet } from "$lib/config/";
@@ -6,7 +7,6 @@
   import { Assets,type IAssets,loadImages} from "../../lib/taleemApp/taleem-canvas";
   import Player from "../../lib/taleemApp/presentationPlayer/Player.svelte";
   import { onMount } from "svelte";
-  import {presentation} from "./presentation";
   import getPresentationImages from "../../lib/taleemApp/app/getPresentationImages/getPresentationImages"
   import ProjectToolbar from "$lib/ProjectToolbar.svelte";
 //////////////////////////////

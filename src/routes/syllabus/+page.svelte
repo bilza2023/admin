@@ -3,13 +3,14 @@
   import { toast } from "@zerodevx/svelte-toast";
   import { onMount } from "svelte";
   import DD from "../../lib/taleemApp/app/DD.svelte";
+  import {exerciseNumbersList} from "../../lib/taleemApp/app/exerciseNumbersList";
   ////////////////////////////////
   let presentations;
   ////////////////////////////////
-  let chapterItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-  let exerciseItems = ["1.1","1.2","1.3"];
+  // let chapterItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+  let exerciseItems = exerciseNumbersList;
   ////////////////////////////////
-  let chapter = 1;
+  // let chapter = 1;
   let exercise = "1.1";
 
   ////////////////////////////////
@@ -24,7 +25,7 @@
         `${API_URL}/presentation/readMany`,
         {
           tcode:"fbise9math",
-          chapter,
+          // chapter,
           exercise,
         }
       );
@@ -40,10 +41,10 @@
       // Optionally set some error state to display to the user
     }
   }
-  function setChapter(val){
-  chapter = parseInt(val);
-  console.log("chapter",chapter);
-  }
+  // function setChapter(val){
+  // chapter = parseInt(val);
+  // console.log("chapter",chapter);
+  // }
 
   function setExercise(val){
     exercise = val;
@@ -58,7 +59,9 @@
 
 <!-- Selection Elements -->
 <div class="flex gap-2 justify-center pt-5 pb-5 bg-slate-700">
-<DD items={chapterItems} selectedValue={chapter} onSelect={setChapter}/>
+  <!-- <h1 class="text-white">Chapter</h1> -->
+  <!-- <DD items={chapterItems} selectedValue={chapter} onSelect={setChapter}/> -->
+  <h1 class="text-white">Exercise</h1>
 <DD items={exerciseItems} selectedValue={exercise} onSelect={setExercise}/>
 <button class="load-button" on:click={getData}>Load</button>
 </div>
@@ -71,7 +74,7 @@
       {#each presentations as presentation}
    
         <div class="card">
-          <div class="card-header">{presentation.name}</div>
+          <div class="card-header">Ex#{presentation.exercise} Q#{presentation.questionNo}-{presentation.part}</div>
           <!-- <div class="card-body">
             <h1>{presentation.id}</h1>
             </div> -->
