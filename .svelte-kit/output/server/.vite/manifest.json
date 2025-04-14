@@ -74,7 +74,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.6B7IPMHK.css"
+      "_app/immutable/assets/_layout.Bb-JuKjr.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -116,12 +116,12 @@
     "isEntry": true,
     "src": "src/routes/canvas_slides_index/+page.svelte"
   },
-  "src/routes/db_editor/+page.svelte": {
+  "src/routes/editor/+page.svelte": {
     "css": [
       "_app/immutable/assets/_page.DTMBWJWD.css",
       "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
     ],
-    "file": "entries/pages/db_editor/_page.svelte.js",
+    "file": "entries/pages/editor/_page.svelte.js",
     "imports": [
       "_ssr.js",
       "_CoreItemsMap.js",
@@ -129,14 +129,14 @@
       "_ProjectToolbar.js"
     ],
     "isEntry": true,
-    "src": "src/routes/db_editor/+page.svelte"
+    "src": "src/routes/editor/+page.svelte"
   },
-  "src/routes/db_player/+page.svelte": {
+  "src/routes/player/+page.svelte": {
     "css": [
       "_app/immutable/assets/_page.0YQbNFlR.css",
       "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
     ],
-    "file": "entries/pages/db_player/_page.svelte.js",
+    "file": "entries/pages/player/_page.svelte.js",
     "imports": [
       "_ssr.js",
       "_SvelteToast.svelte_svelte_type_style_lang.js",
@@ -144,12 +144,16 @@
       "_ProjectToolbar.js"
     ],
     "isEntry": true,
-    "src": "src/routes/db_player/+page.svelte"
+    "src": "src/routes/player/+page.svelte"
   },
   "src/routes/syllabus/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.em8ILO-N.css"
+    ],
     "file": "entries/pages/syllabus/_page.svelte.js",
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js"
     ],
     "isEntry": true,
     "src": "src/routes/syllabus/+page.svelte"

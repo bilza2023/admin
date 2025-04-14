@@ -11,13 +11,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       title: "Editor",
       image: "magic.jpeg",
       comments: "Editor",
-      url: "db_editor"
+      url: "editor?id=cm9fk5dh50asj70fmtpm9tmg2"
     },
     {
       title: "Player",
       image: "player.jpeg",
       comments: "Player",
-      url: "db_player"
+      url: "player?id=cm9fk5dh50asj70fmtpm9tmg2"
     },
     // {
     //   title: 'The Editor',

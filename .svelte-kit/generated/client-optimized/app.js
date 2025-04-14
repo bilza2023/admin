@@ -17,8 +17,8 @@ export const dictionary = {
 		"/": [2],
 		"/canvas_slides_index": [4],
 		"/canvas_slides": [3],
-		"/db_editor": [5],
-		"/db_player": [6],
+		"/editor": [5],
+		"/player": [6],
 		"/syllabus": [7]
 	};
 
