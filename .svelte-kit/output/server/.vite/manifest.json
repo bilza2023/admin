@@ -97,9 +97,9 @@
     "file": "entries/pages/canvas_slides/_page.svelte.js",
     "imports": [
       "_ssr.js",
-      "_CoreItemsMap.js",
       "_client.js",
-      "_SvelteToast.svelte_svelte_type_style_lang.js"
+      "_SvelteToast.svelte_svelte_type_style_lang.js",
+      "_CoreItemsMap.js"
     ],
     "isEntry": true,
     "src": "src/routes/canvas_slides/+page.svelte"
