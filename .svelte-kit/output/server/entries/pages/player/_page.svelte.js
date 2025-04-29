@@ -2,6 +2,7 @@ import { c as create_ssr_component, v as validate_component } from "../../../chu
 import "../../../chunks/SvelteToast.svelte_svelte_type_style_lang.js";
 import "../../../chunks/CoreItemsMap.js";
 import "katex";
+/* empty css                                                   */
 import "howler";
 /* empty css                                                          */
 import { P as ProjectToolbar } from "../../../chunks/ProjectToolbar.js";

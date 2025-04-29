@@ -10,6 +10,10 @@
   "_CoreItemsMap.js": {
     "file": "chunks/CoreItemsMap.js"
   },
+  "_Player.svelte_svelte_type_style_lang.js": {
+    "file": "_app/immutable/assets/Player.0YQbNFlR.css",
+    "src": "_Player.svelte_svelte_type_style_lang.js"
+  },
   "_PlayerToolbar.svelte_svelte_type_style_lang.js": {
     "file": "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css",
     "src": "_PlayerToolbar.svelte_svelte_type_style_lang.js"
@@ -133,7 +137,7 @@
   },
   "src/routes/player/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.0YQbNFlR.css",
+      "_app/immutable/assets/Player.0YQbNFlR.css",
       "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
     ],
     "file": "entries/pages/player/_page.svelte.js",
@@ -145,6 +149,21 @@
     ],
     "isEntry": true,
     "src": "src/routes/player/+page.svelte"
+  },
+  "src/routes/static_player/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/Player.0YQbNFlR.css",
+      "_app/immutable/assets/PlayerToolbar.CYcg1EC6.css"
+    ],
+    "file": "entries/pages/static_player/_page.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_SvelteToast.svelte_svelte_type_style_lang.js",
+      "_CoreItemsMap.js",
+      "_ProjectToolbar.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/static_player/+page.svelte"
   },
   "src/routes/syllabus/+page.svelte": {
     "css": [
