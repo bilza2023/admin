@@ -14,21 +14,27 @@
     let assets:IAssets | null =null;
     let images = ["atom.png","baloons.png","activity1.jpg","drops.png"];
     let imagesUrl   = "/images/";//if needed take it out of onmount
+    let soundFileName = null;
 ////////////////////////////////      
 ////////////////////////////////
 onMount(async () => {
   try { // Added try-catch block for onMount
-    debugger
+  
     const id = new URLSearchParams(location.search).get("id");
     const incommingPresentationResponse = await ajaxGet(`${API_URL}/presentation/read/${id}`);
 //....
     if (incommingPresentationResponse.ok) {
+ 
       let presentation = await incommingPresentationResponse.json();
       // const imagesUrl = "/images/"; // Consider if this should be outside onMount
       images = getPresentationImages(presentation.slides);
       const imagesMap = await loadImages(images, imagesUrl);
       assets = new Assets(imagesMap);
       slides = sortBySortOrder(presentation.slides);
+////////////////////////////////////////////////////////////////////////////////
+
+soundFileName = await getSoundFile(presentation.filename);
+////////////////////////////////////////////////////////////////////////////////
     } else {
       console.error("Failed to fetch presentation");
       toast.push("Failed to load presentation.");
@@ -41,9 +47,20 @@ onMount(async () => {
     function sortBySortOrder(slides){
     return slides.slice().sort((a, b) => a.sortOrder - b.sortOrder);
   }
+  async function getSoundFile(filename) {
+ 
+  const customPath = '/sounds/' + filename + '.opus';
+  try {
+    const res = await fetch(customPath, { method: 'HEAD' });
+    return res.ok ? customPath : '/sounds/music.opus';
+  } catch {
+    return '/sounds/music.opus';
+  }
+}
+
 </script>
 <ProjectToolbar />
-{#if slides && assets}
+{#if slides && assets && soundFileName}
 <!----ASS-I-(just AS assets,slides and no images, save)--->
-<Player slides={slides} {assets}  />
+<Player slides={slides} {assets}  {soundFileName} />
 {/if}

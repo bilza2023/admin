@@ -13,7 +13,7 @@ import periodToStartEndStyle from "../app/periodToStartEndStyle";
 ////////////////////////////--AS////////////////////////////////
     export let slides:ISlide[];
     export let assets:IAssets; //assets to have images loaded
-    export let soundFileName = '/sounds/music.opus'; //default music sound
+    export let soundFileName; //default music sound
 /////////////////////////////////////////
     let currentSlide:ISlide | null = null;  
     let currentSlideIndex = 0;
