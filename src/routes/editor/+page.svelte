@@ -21,7 +21,7 @@
   let id=null;
   //////////////////////////////////////////////////////////////////////////
   onMount(async () => {
-    // debugger;
+    
     id = new URLSearchParams(location.search).get("id");
     const incommingPresentationResponse = await ajaxGet(`${API_URL}/presentation/read/${id}`);
 //....
@@ -31,21 +31,30 @@
       images = getPresentationImages(presentation.slides);
       const imagesMap = await loadImages(images, imagesUrl);
       assets = new Assets(imagesMap);
-      slides = presentation.slides;
+      slides = sortBySortOrder(presentation.slides);
     } else {
       console.error("Failed to fetch presentation");
       toast.push("Failed to load presentation.");
     }
   });
 
+  function sortBySortOrder(slides){
+    return slides.slice().sort((a, b) => a.sortOrder - b.sortOrder);
+  }
   async function save() {
-
- debugger
+    debugger;
+    // let slides = presentation.slides;
+     //////sort order
+     for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
+      slide.sortOrder = i;
+    }
+//////////////////////////////////////////////    
     const eqSlidesData: any[] = []; // Explicitly type eqSlidesData
     const canvasSlidesData: any[] = []; // Explicitly type canvasSlidesData
-    // debugger;
-    for (let i = 0; i < presentation.slides.length; i++) {
-      const slide = presentation.slides[i];
+    
+    for (let i = 0; i < slides.length; i++) {
+      const slide = slides[i];
       if (slide.type === "canvas") {
         canvasSlideRemoveAllHandles(slide.items);
         canvasSlidesData.push(slide);
@@ -55,6 +64,9 @@
       }
     }
 
+///////////////////////////////////////
+
+///////////////////////////////////////
     const result = await ajaxPost(`${API_URL}/presentation/update`, {
       presentationId: presentation.id,
       presentationData: presentation,

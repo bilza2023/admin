@@ -67,6 +67,9 @@
       currentSlide = null;
     }
   });
+  function sortBySortOrder(){
+    return slides.slice().sort((a, b) => a.sortOrder - b.sortOrder);
+  }
   function setSlideDuration() {
     // debugger;
     slides = periodToStartEndStyle(slides);  
@@ -109,10 +112,12 @@
   }
   function moveUp() {
     moveUpFn(currentSlideIndex, slides);
+    sortBySortOrder();//new
     prev();
   }
   function moveDown() {
     moveDownFn(currentSlideIndex, slides);
+    sortBySortOrder();//new
     next();
   }
   function deleteFn() {
