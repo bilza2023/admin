@@ -78,7 +78,7 @@
   },
   "src/routes/+layout.svelte": {
     "css": [
-      "_app/immutable/assets/_layout.Bb-JuKjr.css"
+      "_app/immutable/assets/_layout.BprvNcom.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -96,6 +96,25 @@
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
+  },
+  "src/routes/admin/+page.svelte": {
+    "file": "entries/pages/admin/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/admin/+page.svelte"
+  },
+  "src/routes/blog/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.CiOj15UQ.css"
+    ],
+    "file": "entries/pages/blog/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/blog/+page.svelte"
   },
   "src/routes/canvas_slides/+page.svelte": {
     "file": "entries/pages/canvas_slides/_page.svelte.js",
