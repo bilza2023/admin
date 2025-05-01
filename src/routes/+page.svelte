@@ -64,3 +64,8 @@
       {/each}
     </div>
   </div>
+
+
+
+  <a href="/blog">Blog</a>
+  <a href="/admin">Home</a>
