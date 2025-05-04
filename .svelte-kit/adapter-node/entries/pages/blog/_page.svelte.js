@@ -5,7 +5,7 @@ const css = {
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<h1 class="svelte-o5vp62" data-svelte-h="svelte-otr9cw">Blog Index</h1> <ul class="svelte-o5vp62" data-svelte-h="svelte-1lofpby"><li class="svelte-o5vp62"><a href="/blog/backend-servies-presentation/index.html" class="svelte-o5vp62">Presentation</a></li> <li class="svelte-o5vp62"><a href="/blog/devops/installing_nginx.html" class="svelte-o5vp62">Installing NginX on Server</a></li>  </ul>`;
+  return `<h1 class="svelte-o5vp62" data-svelte-h="svelte-otr9cw">Blog Index</h1> <ul class="svelte-o5vp62" data-svelte-h="svelte-10mowjr"><li class="svelte-o5vp62"><a href="/blog/letter_to_parents_4may_2025.html" class="svelte-o5vp62">A Letter To Parents</a></li> <li class="svelte-o5vp62"><a href="/blog/devops/installing_nginx.html" class="svelte-o5vp62">Installing NginX on Server</a></li>   </ul>`;
 });
 export {
   Page as default

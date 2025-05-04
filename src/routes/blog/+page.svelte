@@ -1,10 +1,12 @@
 <h1>Blog Index</h1>
 
 <ul>
-  <li><a href="/blog/backend-servies-presentation/index.html">Presentation</a></li>
+  <li><a href="/blog/letter_to_parents_4may_2025.html">A Letter To Parents</a></li>
   <li>
     <a href="/blog/devops/installing_nginx.html">Installing NginX on Server</a>
   </li>
+
+  <!-- <li><a href="/blog/backend-servies-presentation/index.html">Presentation</a></li> -->
   <!-- Add more links below -->
 </ul>
 
